@@ -64,6 +64,14 @@ ul {
     background: #f4f4f4;
 }
 
+/* Menu */
+.ham-menu {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+}
+
 /* Main Nav */
 .main-nav {
     display: flex;
@@ -95,7 +103,6 @@ ul {
 }
 
 .main-nav ul.main-menu {
-    display: flex;
     flex: 1;
     margin-left: 20px;
 }
@@ -185,7 +192,7 @@ ul {
 /* Links */
 section.bottom-links {
     width: 100%;
-    padding: 50px 0 30px;
+    padding: 30px 0 30px;
     font-size: 11px;
     color: #757575;
     background-color: #f2f2f2;
@@ -193,7 +200,7 @@ section.bottom-links {
 
 .bottom-links .footer-links,
 .bottom-links .footer {
-    width: 100%;
+    width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -237,4 +244,95 @@ section.bottom-links {
 
 .bottom-links .language i {
     margin-right: 10px;
+}
+
+.footer-links ul {
+    padding: 20px 0 0 0;
+}
+
+/* Responsive Design */
+@media(max-width: 700px) {
+    .ham-menu {
+        display: inline-block;
+        top: 3%;
+        right: 5%;
+    }
+    .ham-menu:hover {
+        opacity: 0.5;
+    }
+
+    .main-nav .right-menu {
+        margin-right: 40px;
+    }
+
+    .main-nav ul.main-menu {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        padding: 30px;
+        background-color: #f2f2f2;
+        border-right: 1px solid #ccc;
+        opacity: 0.9;
+        top: 0;
+        left: 0;
+        transform: translateX(-500px);
+        transition: transform 0.3s ease-in-out;
+    }
+    .main-nav .main-menu.show {
+        padding-top: 30px;
+        transform: translateX(-20px);
+    }
+    .main-nav .main-menu li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        font-size: 14px;
+    }
+    .main-nav .main-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .home-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bottom-links .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .xbox .content {
+        width: 60%;
+    }
+    .xbox .content h2 {
+        margin-bottom: 20px;
+    }
+    .xbox .content p{
+        display: none;
+    }
+
+    .carbon .content {
+        width: 85%;
+        padding: 50px 0 0 20px
+    }
+}
+
+@media(max-width: 500px) {
+    .home-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-links .footer-links {
+        grid-template-columns: 1fr;
+    }
+
+    .xbox .content h2 {
+        margin-bottom: 20px;
+    }
+    .xbox .content p{
+        display: none;
+    }
+
+    .carbon .content {
+        width: 85%;
+    }
 }

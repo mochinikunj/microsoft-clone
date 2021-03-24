@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <!-- Menu -->
+    <div class="ham-menu"><i class="fas fa-bars fa-2x"></i></div>
+
     <!-- Navigation menu -->
     <div class="container">
         <nav class="main-nav">
@@ -241,5 +244,11 @@
             </ul>
         </div>
     </section>
+
+    <script>
+        document.querySelector('.ham-menu').addEventListener('click', () => {
+            document.querySelector('.main-menu').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
