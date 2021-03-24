@@ -284,7 +284,7 @@ section.bottom-links {
         transform: translateX(-20px);
     }
     .main-nav .main-menu li {
-        padding: 10px;
+        padding: 20px;
         border-bottom: 1px solid #ccc;
         font-size: 14px;
     }
